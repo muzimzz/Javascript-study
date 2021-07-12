@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>===</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <h2>==와 ===의 차이</h2>
+    <ol>
+      <li>== (equality operator)</li>
+      <p>
+        자동 유형변화 비교<br>
+        서로 다른 유형의 두 변수의 "값" 비교
+      </p>
+      <li>=== (strict equality operator 또는 identity operator)
+        <p>두 피연산자의 유형도 비교</p>
+      </li>
+    </ol>
+    <hr>
+    <p>
+      alert(1 == 1);  true<br>
+      alert(1 == 2);  false<br>
+      alert(1 == "1");  true<br>
+      alert(1 === 1);  true<br>
+      alert(1 === "1");  false<br>
+      alert(0 == "0");  true<br>
+      alert(0 == []);  true<br>
+      alert("0" == []);  false<br>
+      alert(null == undefined);  true<br>
+      alert(null === undefined);  false<br>
+      alert(true == 1);  true<br>
+      alert(true === 1);  false<br>
+      alert(true == "1");  true<br>
+      alert(true === "1");  false<br>
+      alert(0 === -0);  true<br>
+      alert(NaN === NaN);  false<br>
+    </p>
+    <p>Javascript에서는 ===를 사용하는 습관을 들이자.<br>
+    != 연산자와 !== 연산자도 있다.</p>
+
+    <a href="https://dorey.github.io/JavaScript-Equality-Table/" target="_blank">
+    Equaliy Table</a>
+      <script type="text/javascript">
+       
+      </script>
+  </body>
+</html>
