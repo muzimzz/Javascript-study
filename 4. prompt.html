@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>입력</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <h2>prompt</h2>
+    <p>var a = prompt("text"); <br>
+    text: 라는 문구와 함께 나오는 입력창에 입력한 값이 a에 저장된다.</p>
+    <script type="text/javascript">
+      var id = prompt("아이디(yoonserin)를 입력하세요: ");
+      if (id === "yoonserin") {
+        var pw = prompt("비밀번호(1111)를 입력하세요: ");
+        if (pw === "1111") {
+          alert("로그인 되었습니다. " + id + "님 반갑습니다.");
+        } 
+        else {
+          alert("비밀번호가 일치하지 않습니다.");
+        }
+      }
+      else {
+        alert("아이디가 일치하지 않습니다.");
+      }
+    </script>
+  </body>
+</html>
