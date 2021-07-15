@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>function</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      function initial(name) {
+        return name[0];   
+      }  
+
+      naming = function(name) {
+        return name[0] + name[2] + name[1];
+      };   
+
+      ( function() { 
+        document.write("my name is yoonserin.");
+      } ) ();
+
+      var name = prompt("이름을 입력하세요: ");
+      alert(name + "님은 " + initial(name) + "씨 입니다.");         
+      
+      var newname = naming(name);
+      alert(name + "님의 새 이름은 " + newname + "입니다.");
+
+    </script>
+  </body>
+</html>
