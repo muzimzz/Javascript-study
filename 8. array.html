@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>array</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <a href="https://opentutorials.org/course/50/38">
+    생활코딩 Javascript사전 (Array)</a>
+    <hr>
+
+    <script type="text/javascript">
+
+      var i;
+
+      var member = ["serin", "yuri", "jin"];
+      var member2 = ["orini", "taeyeon"];
+      alert(member);
+      alert(member2)
+
+      function print() {
+        for (i = 0; i<member.length; i++) {
+          document.write(member[i] + "<br/>");
+        }
+      }
+
+      document.write("member: ");
+
+      for (i = 0; i < member.length; i++){ 
+        document.write(member[i] + " ");
+      }
+
+      document.write("<br/>member2: ");
+
+      for (i = 0; i < member2.length; i++) {
+        document.write(member2[i] + " ");
+      }
+
+      document.write("<hr/>");
+      document.write("<br/>member[i].toUpperCase(): 대문자 변환<br/>" );
+
+      for (i = 0; i < member.length; i++) {
+        document.write(member[i].toUpperCase() + "<br/>");
+      }
+
+      document.write("<hr/><br/>member.push(\"osamu\"): 인덱스 끝에 원소 추가<br/>");
+      member.push("osamu");
+      member = member.concat(member2);
+
+      document.write("member = member.concat(member2): 배열의 모든 원소를 추가 (배열+배열)<br/>" );
+
+      print();
+
+      document.write("<hr/><br/>member.unshift(\"zett\"): 맨 첫 인덱스에 추가->밀어내기<br/>");
+      member.unshift("zett");
+
+      print();
+
+      document.write("<hr/><br/>member.splice(1, 3, \"GOD\", \"JD\"): 1번 인덱스에 해당하는 원소부터 3개를 삭제하고 원소 추가<br/>");
+      member.splice(1, 3, "GOD", "JD");
+
+      print();
+
+      document.write("<hr/><br/>member.shift(): 배열의 첫 번째 원소 제거<br/>");
+      member.shift();
+
+      print();
+
+      document.write("<hr/><br/>member.pop(): 배열의 마지막 원소 제거<br/>");
+      member.pop();
+
+      print();
+
+      document.write("<hr/><br/>member.sort(): 오름차순 정렬<br/>");
+      member.sort();
+
+      print();
+
+      document.write("<hr/><br/>member.reverse(): 내림차순 정렬<br/>");
+      member.reverse();
+
+      print();
+
+    </script>
+  </body>
+</html>
