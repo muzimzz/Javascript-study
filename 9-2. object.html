@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>object</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <script type="text/javascript">
+    
+      var info = {
+        list: {one : 1, two : 2, three : 3},
+
+        show: function() {
+          alert("Hello World");
+        },
+
+        get_info: function() {
+          for (var num in this.list) 
+            alert(num + " --- " + this.list[num]);
+          }
+      }
+
+      info.show();
+      info.get_info();
+    </script>
+  </body>
+</html>

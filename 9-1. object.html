@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>object</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <ul>
+      <script type="text/javascript">
+        var person1 = {name: "yoonserin", age: 23, school: "SANGMYUNG" };
+        var person2 = { };
+        person2.name = "Jongpal";
+        person2.age = 20;
+        person2.school = "SEONG";
+      
+        alert(person1.name + "님은 " + person1.age + "살이고 " + person1.school + "학교에 다닙니다.");
+        alert(person2.name + "님은 " + person2.age + "살이고 " + person2.school + "학교에 다닙니다.");
+        
+        for (key in person1) {
+          document.write("<li>key: " + key + " --- value: " + person1[key] + "</li>");
+        }
+     
+      </script>
+    </ul>   
+
+    <script type="text/javascript">
+      var info = {
+        list: {one : 1, two : 2, three : 3},
+        show: function() {
+          alert("Hello World");
+        }
+      }
+
+      info.show();
+    </script>
+  </body>
+</html>
