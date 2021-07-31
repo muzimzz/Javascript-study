@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>scope</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <script type="text/javascript">
+      const vscope = "global";
+
+      function fscope() {
+        const vscope = "local";
+        alert(vscope);
+      }
+
+      function fscope2() {
+        alert(vscope);
+      }
+
+      const num = 5;
+
+      function a() {
+        const num = 10;
+        b();
+      }
+
+      function b() {
+        alert(num);
+      }
+
+    fscope();
+    fscope2();
+    a();
+
+    var i = 5;
+
+    function a() {
+        var i = 10;
+        b();
+    }
+
+    function b() {
+        document.write(i);
+    }
+
+    a();
+
+
+    </script>
+  </body>
+</html>
