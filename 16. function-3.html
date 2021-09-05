@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>function3</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <script type="text/javascript">
+      let numbers = [20, 10, 15, 30, 0, 5];
+      // number: 객체(배열) -> .func() 앞에 있는 것
+      // sort(): 메소드 -> 객체에 속해있는 함수
+      document.write("let numbers = [20, 10, 15, 30, 0, 5];</br>");
+      document.write("document.write(numbers.sort());</br>");
+      document.write("결과: " + numbers.sort() + "</br>"); 
+      document.write("위의 결과는 숫자가 아닌 문자 기준으로 정렬한 것</br>");
+
+      let sortfunc = function(a, b) {
+        return a - b; 
+      }
+    </script>
+    <hr>
+    <pre>
+      let sortfunc = function(a, b) {
+        return a - b;  // 역순 정렬은 return b - a;
+      }
+
+      return a - b; 는
+
+        if (a > b) {
+          return 1;  // 양수 반환
+        }
+        else if (a < b) {
+          return -1; // 음수 반환
+        }
+        else {
+          return 0;  // 0 반환
+        }
+
+      을 간략하게 한 것이다.
+    </pre>
+    <hr>
+    <script>
+      document.write("document.write(numbers.sort(sortfunc)); </br>");
+      document.write("결과: " + numbers.sort(sortfunc));
+    </script>
+    <hr>
+    <h3>콜백 함수</h3>
+    <p>
+      let sortfunc = function(a, b) { ... }; 는 콜백(call back) 함수이다.<br>
+      메서드의 기본적인 작동 방밥을 바꿀 수 있다.
+    </p>
+  </body>
+</html>

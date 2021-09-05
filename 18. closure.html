@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>closure</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <h2>클로저(closure)란?</h2>
+    <p>내부함수가 외부함수의 맥락에 접근할 수 있는 것</p>
+    <p>Javascript를 이용한 고난이도 테크닉을 구사하는데 필수적인 개념이다.</p>
+    <hr>
+    <b>Javascript는 함수 안에서 또 다른 함수를 선언할 수 있다.</b>
+    <pre>
+      ---- 예시 ----
+      function outter() {
+        function inner() {
+          const name = "yoonserin";
+          alert(name);
+        }
+        inner();
+      }
+
+      outter();
+    </pre>
+    <b>내부함수는 외부함수의 지역변수에 접근할 수 있다.</b>
+    <pre>
+      ---- 예시 ----
+      function outter() {
+        const name = "yoonserin";
+        function inner() {
+          alert(name);
+        }
+        inner();
+      }
+
+      outter();
+    </pre>
+    <p>내부함수에서 외부함수의 멤버에 접근하는 것을 closure(클로저)라고 한다.</p>
+    <script type="text/javascript">
+      function outter() {
+        const name = "yoonserin";
+        function inner() {
+          alert(name);
+        }
+        inner();
+      }
+
+      outter();
+    </script>
+  </body>
+</html>
